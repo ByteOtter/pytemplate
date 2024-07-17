@@ -1,0 +1,61 @@
+# Refer to https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# For further details of the pyproject.toml format.
+# Replace ar remove anything to make this file yours.
+
+# Make sure to replace the application name, author information, dependencies,
+# description and license to fit your usecase.
+# Also, remove the dependency section if you do not need any external dependencies.
+
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytemplate"
+authors = [
+  { name = "Your Name", email = "your@mail.com" },
+]
+version = "0.1.0"
+description = "My first Python application!"
+readme = "README.md"
+license = { file = "LICENSE" }
+# keywords = ["template", "python"] # some keywords to find this appication on pypi
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">= 3.11"
+# Change this if you do not need click. This is an example.
+dependencies = [
+  "click",
+]
+
+[project.urls]
+Homepage = "https://github.com/ByteOtter/pytemplate"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/ByteOtter/pytemplate"
+
+[project.optional-dependencies]
+# use this space to declare optional dependencies
+tests = ["pytest"] # example
+
+[project.scripts]
+pytemplate = "pytemplate.cli:cli"
+
+#[project.entry-points."pytemplate.cli"]
+#pytemplate = "pytemplate:cli"
